@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canales Digitales</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+      }
+
+      html {
+        line-height: 1;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      p,
+      ul,
+      li {
+        line-height: 1.4;
+      }
+      .slick-dotted.slick-slider {
+        margin-bottom: 30px;
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: -25px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+      }
+
+      .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+      }
+
+      .slick-dots li button:hover,
+      .slick-dots li button:focus {
+        outline: none;
+      }
+
+      .slick-dots li button:hover:before,
+      .slick-dots li button:focus:before {
+        opacity: 1;
+      }
+
+      .slick-dots li button:before {
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        opacity: 0.25;
+        color: #000;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        color: #000;
+      }
+      .btn {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        width: auto;
+        height: 40px;
+        position: relative;
+        display: inline-block;
+        padding: 11px 20px;
+        background-color: transparent;
+        border: #da291c 1px solid;
+        cursor: pointer;
+      }
+
+      .btn.btnPrimario {
+        color: #fff;
+        background-color: #da291c;
+      }
+      /* Base  */
+      @font-face {
+        font-family: "AMX-Regular";
+        src: url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Regular.eot?")
+            format("eot"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Regular.woff2")
+            format("woff2"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Regular.woff")
+            format("woff"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Regular.ttf")
+            format("truetype"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Regular.svg#AMX-Regular")
+            format("svg");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "AMX-Medium";
+        src: url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Medium.eot?")
+            format("eot"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Medium.woff2")
+            format("woff2"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Medium.woff")
+            format("woff"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Medium.ttf")
+            format("truetype"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Medium.svg#AMX-Medium")
+            format("svg");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "AMX-Bold";
+        src: url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Bold.eot?")
+            format("eot"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Bold.woff2")
+            format("woff2"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Bold.woff")
+            format("woff"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Bold.ttf")
+            format("truetype"),
+          url("https://www.claro.com.pe/assets/havas/general/fonts/AMX-Bold.svg#AMX-Bold")
+            format("svg");
+        font-display: swap;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .btn.btnGrisRojo {
+        color: #da291c;
+        background-color: #fff;
+        border-color: #fff;
+      }
+
+      .btn.btnGrisRojo:hover {
+        color: #fff;
+        background-color: #b52217;
+        border-color: #b52217;
+      }
+      h1.hCenter,
+      .h1.hCenter,
+      h2.hCenter,
+      .h2.hCenter,
+      h3.hCenter,
+      .h3.hCenter,
+      h4.hCenter,
+      .h4.hCenter,
+      h5.hCenter,
+      .h5.hCenter,
+      h6.hCenter,
+      .h6.hCenter {
+        text-align: center;
+      }
+      h2,
+      .h2 {
+        font-size: 24px;
+        font-size: 1.5rem;
+      }
+      @media only screen and (min-width: 640px) {
+        h2,
+        .h2 {
+          font-size: 36px;
+          font-size: 2.25rem;
+        }
+      }
+      h1,
+      .h1,
+      h2,
+      .h2,
+      h3,
+      .h3,
+      h4,
+      .h4 {
+        font-family: "AMX", "Roboto", sans-serif;
+      }
+      section {
+        padding: 32px 0;
+        background-color: #fff;
+      }
+      @media only screen and (min-width: 640px) {
+        section {
+          padding: 40px 0;
+        }
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #3c3c3c;
+      }
+      .container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      @media only screen and (min-width: 1500px) {
+        .container {
+          max-width: 1440px;
+        }
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.claro.com.pe/portal/pe/recursos_tema/js/slick/slick.js?V1"></script>
+    <script src="https://www.claro.com.pe/portal/pe/recursos_portlets/PE_CPPFEPnesPrecios/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="boletinPlantilla">
+      <div class="contentPDF" id="boletinPlantilla">
+        <div class="pagina1">
+          <div class="banner">
+            <div class="container">
+              <div class="contenteImg">
+                <picture>
+                  <source
+                    srcset="
+                      https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/Capa_1m.png
+                    "
+                    media="(max-width: 650px)"
+                  />
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/Capa_1.png"
+                    alt="Imagen predeterminada"
+                  />
+                </picture>
+              </div>
+              <div class="contentText">
+                <div class="cabecera">
+                  <div class="fecha">22 de enero, 2025</div>
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claro.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <span>CLARO EMPRESAS</span>
+                  <h1>Boletín <br />Ciberseguridad</h1>
+                  <span>Boletín Semanal #163</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container pad50">
+            <h2 class="rojo">
+              Aumenta la eficacia de tu SOC con estos principios claves de
+              detección
+            </h2>
+            <div class="contentTextColumn padTop50">
+              <p>
+                Un grupo de investigadores de Eindhoven University of Technology
+                ha presentado hallazgos que permitirían mejorar
+                significativamente la eficiencia de los Centros de Operaciones
+                de Seguridad (SoC). Este estudio se centra en diseñar reglas de
+                detección de bajo ruido para los sistemas de detección NIDS. Los
+                SOC enfrentan el desafío de equilibrar la detección de amenazas
+                potenciales (cobertura) y la minimización de falsas alarmas
+                (especificidad), dificultando su capacidad para enfocarse en
+                amenazas reales.
+              </p>
+              <p>
+                Para abordar estos desafíos, los investigadores identificaron
+                cinco principios esenciales para crear reglas de detección más
+                efectivas:
+              </p>
+              <ul>
+                <li>
+                  <strong>Utilizar Indicadores de Compromiso (IoCs):</strong>
+                  Implementar IoCs específicos y bien definidos reducen las
+                  falsas alarmas, ya que se enfocan en patrones precisos de
+                  actividad maliciosa.
+                </li>
+                <li>
+                  <strong
+                    >Aplicar Limitación de Alertas (Alert Throttling):
+                  </strong>
+                  Restringir la frecuencia de alertas similares en un período
+                  corto evita la sobrecarga y permite una gestión más manejable
+                  de incidentes.
+                </li>
+                <li>
+                  <strong>Utilizar herramientas actualizadas: </strong>
+                  Implementar tecnologías de seguridad como SIEM para la
+                  clasificación del tipo alertas según el éxito o etapa del
+                  ataque permite priorizar las respuestas a incidentes que
+                  representan una amenaza real.
+                </li>
+                <li>
+                  <strong
+                    >Evitar Mecanismos de Detección Generalizados:
+                  </strong>
+                  Las reglas demasiado amplias pueden generar un alto volumen de
+                  alertas irrelevantes. Diseñar reglas específicas mejora la
+                  precisión en la detección de amenazas.
+                </li>
+                <li>
+                  <strong>Revisar y Optimizar Reglas Existentes: </strong>
+                  Tanto las reglas heredadas como las nuevas deben evaluarse
+                  continuamente para asegurar su eficacia y relevancia en el
+                  panorama de amenazas actual.
+                </li>
+              </ul>
+              <p>
+                Tener en cuenta estos principios puede ayudar a las empresas a
+                reducir la carga de trabajo innecesaria en sus SOC, permitiendo
+                que los analistas se concentren en amenazas reales y mejoren la
+                eficiencia general de las operaciones de seguridad.
+              </p>
+            </div>
+            <p class="fuente">
+              <b>Fuente:</b>
+              https://arxiv.org/pdf/2501.09808
+            </p>
+          </div>
+          <div class="container indice">
+            <div class="contentIndice">
+              <div class="fondoimg">
+                <img
+                  src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                  alt=""
+                />
+              </div>
+              <div class="cabeceraLogo">
+                <img
+                  src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                  alt=""
+                />
+              </div>
+              <h2>Índice</h2>
+              <div class="lista">
+                <div class="item">
+                  <div class="cabecera">
+                    <div class="title">
+                      <a href="#cap_Malware">1. Malware</a>
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="cuerpo">
+                    <ul>
+                      <li>
+                        <div class="markert">1.1</div>
+                        Campaña de malware ValleyRAT emplea instaladores MSI y
+                        archivos PNG modificados contra sistemas Windows.
+                      </li>
+                      <li>
+                        <div class="markert">1.2</div>
+                        Vulnerabilidades en dispositivos IoT son explotadas para
+                        crear red botnet y realizar ataques DDoS
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cabecera">
+                    <div class="title">
+                      <a href="#cap_Vulnerabilidades">2. Vulnerabilidades</a>
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="cuerpo">
+                    <ul>
+                      <li>
+                        <div class="markert">2.1</div>
+                        HPE Aruba enfrenta vulnerabilidades que permiten control
+                        no autorizado en redes
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cabecera">
+                    <div class="title">
+                      <a href="#cap_Phishing">3. Phishing</a>
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="cuerpo">
+                    <ul>
+                      <li>
+                        <div class="markert">3.1</div>
+                        Nuevo kit de phishing Sneaky 2FA amenaza cuentas de
+                        Microsoft 365
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cabecera">
+                    <div class="title">
+                      <a href="#cap_Adversarios">4. Adversarios</a>
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="cuerpo">
+                    <ul>
+                      <li>
+                        <div class="markert">4.1</div>
+                        Grupo APT 'DONOT' despliega malware en Android
+                        disfrazado de aplicación de chat
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cabecera">
+                    <div class="title">
+                      <a href="#cap_Indicadores"
+                        >5. Indicadores de Compromiso</a
+                      >
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="cuerpo">
+                    <ul>
+                      <li>
+                        <div class="markert">5.1</div>
+                        Direcciones IP
+                      </li>
+                      <li>
+                        <div class="markert">5.2</div>
+                        Dominio
+                      </li>
+                      <li>
+                        <div class="markert">5.4</div>
+                        Hashes
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="cabecera">
+                    <div class="title">
+                      <a href="#cap_Indicadores">6. Fuentes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2>Prioridad</h2>
+              <div class="listaprioridad">
+                <div class="item">
+                  <span>Crítica</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="35"
+                    viewBox="0 0 34 35"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_88_6979)">
+                      <path
+                        d="M24.0675 14.8715C24.3178 15.6137 24.4558 16.4162 24.4558 17.2446C24.4558 21.3609 21.1162 24.7005 17 24.7005C12.8838 24.7005 9.54416 21.3609 9.54416 17.2446C9.54416 13.1284 12.8751 9.79742 16.9914 9.78879V0.244629C7.60254 0.244629 0 7.8558 0 17.2446C0 26.6335 7.61117 34.2446 17 34.2446C26.3888 34.2446 34 26.6335 34 17.2446C34 15.5619 33.7584 13.9396 33.301 12.4035L24.0761 14.8715H24.0675Z"
+                        fill="url(#paint0_linear_88_6979)"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_88_6979"
+                        x1="1.82081"
+                        y1="38.8959"
+                        x2="26.6046"
+                        y2="3.54108"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#DA291C" />
+                        <stop
+                          offset="1"
+                          stop-color="#DA291C"
+                          stop-opacity="0"
+                        />
+                      </linearGradient>
+                      <clipPath id="clip0_88_6979">
+                        <rect
+                          width="34"
+                          height="34"
+                          fill="white"
+                          transform="translate(0 0.244629)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="item">
+                  <span>Alta</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="35"
+                    viewBox="0 0 34 35"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_88_6981)">
+                      <path
+                        d="M24.0675 14.8715C24.3178 15.6137 24.4558 16.4162 24.4558 17.2446C24.4558 21.3609 21.1162 24.7005 17 24.7005C12.8838 24.7005 9.54416 21.3609 9.54416 17.2446C9.54416 13.1284 12.8751 9.79742 16.9914 9.78879V0.244629C7.60254 0.244629 0 7.8558 0 17.2446C0 26.6335 7.61117 34.2446 17 34.2446C26.3888 34.2446 34 26.6335 34 17.2446C34 15.5619 33.7584 13.9396 33.301 12.4035L24.0761 14.8715H24.0675Z"
+                        fill="url(#paint0_linear_88_6981)"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_88_6981"
+                        x1="1.82081"
+                        y1="38.8959"
+                        x2="26.6046"
+                        y2="3.54108"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#FA9801" />
+                        <stop
+                          offset="1"
+                          stop-color="#FA9801"
+                          stop-opacity="0"
+                        />
+                      </linearGradient>
+                      <clipPath id="clip0_88_6981">
+                        <rect
+                          width="34"
+                          height="34"
+                          fill="white"
+                          transform="translate(0 0.244629)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="item">
+                  <span>Media</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="35"
+                    viewBox="0 0 34 35"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_88_6983)">
+                      <path
+                        d="M24.0675 14.8715C24.3178 15.6137 24.4558 16.4162 24.4558 17.2446C24.4558 21.3609 21.1162 24.7005 17 24.7005C12.8838 24.7005 9.54416 21.3609 9.54416 17.2446C9.54416 13.1284 12.8751 9.79742 16.9914 9.78879V0.244629C7.60254 0.244629 0 7.8558 0 17.2446C0 26.6335 7.61117 34.2446 17 34.2446C26.3888 34.2446 34 26.6335 34 17.2446C34 15.5619 33.7584 13.9396 33.301 12.4035L24.0761 14.8715H24.0675Z"
+                        fill="url(#paint0_linear_88_6983)"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_88_6983"
+                        x1="1.82081"
+                        y1="38.8959"
+                        x2="26.6046"
+                        y2="3.54108"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#1773CE" />
+                        <stop
+                          offset="1"
+                          stop-color="#1773CE"
+                          stop-opacity="0"
+                        />
+                      </linearGradient>
+                      <clipPath id="clip0_88_6983">
+                        <rect
+                          width="34"
+                          height="34"
+                          fill="white"
+                          transform="translate(0 0.244629)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap" id="cap_Malware">
+            <div class="container">
+              <div class="cabecera">
+                <div>01</div>
+                <h2>Malware</h2>
+              </div>
+              <div class="contenido">
+                <div class="fondoimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                    alt=""
+                  />
+                </div>
+                <div class="cabecera2">
+                  <div>
+                    <div class="prioridad">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_88_2535)">
+                          <path
+                            d="M18.4046 11.1853C18.5959 11.7528 18.7015 12.3665 18.7015 13C18.7015 16.1477 16.1477 18.7015 13 18.7015C9.85228 18.7015 7.29848 16.1477 7.29848 13C7.29848 9.85228 9.84569 7.30508 12.9934 7.29848V0C5.81371 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26C20.1797 26 26 20.1797 26 13C26 11.7132 25.8152 10.4726 25.4655 9.29797L18.4112 11.1853H18.4046Z"
+                            fill="url(#paint0_linear_88_2535)"
+                          />
+                        </g>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_88_2535"
+                            x1="1.39239"
+                            y1="29.5569"
+                            x2="20.3447"
+                            y2="2.52081"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#FA9801" />
+                            <stop
+                              offset="1"
+                              stop-color="#FA9801"
+                              stop-opacity="0"
+                            />
+                          </linearGradient>
+                          <clipPath id="clip0_88_2535">
+                            <rect width="26" height="26" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <p>ALTA</p>
+                    </div>
+                    <span>/</span>
+                    <p>Malware</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="bannerimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/banner2.png"
+                    alt=""
+                  />
+                </div>
+                <div class="contentText">
+                  <h3 class="rojo">
+                    1.1 Campaña de malware ValleyRAT emplea instaladores MSI y
+                    archivos PNG modificados contra sistemas Windows.
+                  </h3>
+                  <div class="contentText">
+                    <p>
+                      Según el Threat Bulletin de Intezer, los investigadores
+                      han identificado una campaña de ciberataques orientado a
+                      usuarios del sistema operativo Windows. Los actores de
+                      amenazas están utilizando archivos MSI (Microsoft
+                      Installer) y PNG manipulado para distribuir el malware
+                      ValleyRAT.
+                    </p>
+                    <p>
+                      El vector de ataque principal es la distribución de
+                      archivos MSI maliciosos que se disfrazan como instaladores
+                      de software legítimo. Estos archivos, una vez ejecutados,
+                      descargan y ejecutan payloads adicionales de malware.
+                    </p>
+                    <div class="contentTextColumn vermas">
+                      <p>
+                        El loader PNGPlug establece un entorno para la ejecución
+                        del malware mediante la inyección de memoria y la
+                        evasión de herramientas de seguridad. Este loader
+                        también verifica la presencia de software antivirus
+                        específico y, si no lo detecta, inyecta el contenido del
+                        archivo 'view.png' en un nuevo proceso, facilitando la
+                        ejecución del malware ValleyRAT.
+                      </p>
+                      <p>
+                        El malware ValleyRAT utilizado en esta campaña está
+                        relacionada al grupo APT Silver Fox, conocido por
+                        actividades de espionaje y ciberdelincuencia, empleando
+                        técnicas como ejecución de shellcode en memoria,
+                        ofuscación, escalamiento de privilegios y mecanismos de
+                        persistencia sobre los sistemas infectados.
+                      </p>
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cabecera3">
+                <div class="title">
+                  <h4>Recomendaciones</h4>
+                  <button>
+                    <div class="mas">
+                      Ver más
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 7L1 7"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7 1V13"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="menos">
+                      Ver menos
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 1L1 0.999999"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="contentVermas">
+                  <ul>
+                    <li>
+                      Ejecutar el bloqueo de los Indicadores de Compromiso
+                      (IoCs) previamente identificados en el ítem 5.
+                    </li>
+                    <li>
+                      Restringir la ejecución de archivos MSI únicamente a
+                      fuentes confiables y verificar la autenticidad de los
+                      instaladores antes de su implementación.
+                    </li>
+                    <li>
+                      Implementar o tercerizar un programa para la actualización
+                      de parches de seguridad en sistemas operativos, antivirus
+                      y soluciones de EDR / XDR, garantizando la detección
+                      temprana de nuevas amenazas.
+                    </li>
+                    <li>
+                      Implementar o tercerizar el servicio de caceria de
+                      amenazas (Threat Hunting) para identificar actividades
+                      sospechosas en la red y endpoints de la organización.
+                    </li>
+                    <li>
+                      Implementar y optimizar reglas personalizadas en la
+                      plataforma SIEM (Security Information and Event
+                      Management) para identificar anomalías, correlacionar
+                      eventos relevantes y habilitar una respuesta oportuna
+                      frente a posibles incidentes de seguridad.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="contenido">
+                <div class="fondoimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                    alt=""
+                  />
+                </div>
+                <div class="cabecera2">
+                  <div>
+                    <div class="prioridad">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_88_2535)">
+                          <path
+                            d="M18.4046 11.1853C18.5959 11.7528 18.7015 12.3665 18.7015 13C18.7015 16.1477 16.1477 18.7015 13 18.7015C9.85228 18.7015 7.29848 16.1477 7.29848 13C7.29848 9.85228 9.84569 7.30508 12.9934 7.29848V0C5.81371 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26C20.1797 26 26 20.1797 26 13C26 11.7132 25.8152 10.4726 25.4655 9.29797L18.4112 11.1853H18.4046Z"
+                            fill="url(#paint0_linear_88_2535)"
+                          />
+                        </g>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_88_2535"
+                            x1="1.39239"
+                            y1="29.5569"
+                            x2="20.3447"
+                            y2="2.52081"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#FA9801" />
+                            <stop
+                              offset="1"
+                              stop-color="#FA9801"
+                              stop-opacity="0"
+                            />
+                          </linearGradient>
+                          <clipPath id="clip0_88_2535">
+                            <rect width="26" height="26" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <p>ALTA</p>
+                    </div>
+                    <span>/</span>
+                    <p>Malware</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="contentText">
+                  <h3 class="rojo">
+                    1.2 Vulnerabilidades en dispositivos IoT son explotadas para
+                    crear red botnet y realizar ataques DDoS
+                  </h3>
+                  <div class="contentText">
+                    <p>
+                      Según los investigadores de Trend Micro, se ha
+                      identificado un botnet de dispositivos IoT que han sido
+                      vinculado a una serie de ataques DDoS. Este botnet, que
+                      afecta principalmente a dispositivos IoT con sistema
+                      Linux, como routers inalámbricos y cámaras IP. Este botnet
+                      utiliza variantes del malware Mirai y Bashlite y fue
+                      utilizado para atacar a empresas y organizaciones en
+                      diversos sectores como las telecomunicaciones y hosting.
+                    </p>
+                    <div class="contentTextColumn">
+                      <p>
+                        El vector de ataque principal se basa en la explotación
+                        de vulnerabilidades conocidas y credenciales débiles
+                        para acceder a los dispositivos. Una vez infectados,
+                        estos dispositivos se conectan a servidores de comando y
+                        control (C2) que reciben las instrucciones para ejecutar
+                        los ataques DDoS.
+                      </p>
+                      <p>
+                        El método de ataque de esta botnet incluye una variedad
+                        de técnicas como de tipo SYN flood, ACK flood, y otras
+                        formas de sobrecarga de red. Los comandos de ataque se
+                        envían a través de servidores C2 ubicados en diferentes
+                        países, lo que permite a los atacantes dirigir tráfico
+                        malicioso hacia sus objetivos seleccionados. Los
+                        comandos pueden incluir actualizaciones del malware y
+                        configuraciones para servicios proxy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cabecera3">
+                <div class="title">
+                  <h4>Recomendaciones</h4>
+                  <button>
+                    <div class="mas">
+                      Ver más
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 7L1 7"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7 1V13"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="menos">
+                      Ver menos
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 1L1 0.999999"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="contentVermas">
+                  <ul>
+                    <li>
+                      Ejecutar el bloqueo de los Indicadores de Compromiso
+                      (IoCs) previamente identificados en el ítem 5.
+                    </li>
+                    <li>
+                      Desarrollar una estrategia de mitigación de DDoS que
+                      incluya servicios de filtrado de tráfico para proteger
+                      contra sobrecargas de red.
+                    </li>
+                    <li>
+                      Implementar y fortalecer las reglas en los firewalls y
+                      sistemas de prevención de intrusiones (IPS) para filtrar
+                      tráfico malicioso.
+                    </li>
+                    <li>
+                      Implementar actualizaciones regulares de firmware y
+                      parches de seguridad para mitigar vulnerabilidades
+                      conocidas.
+                    </li>
+                    <li>
+                      Implementar o tercerizar soluciones avanzadas de
+                      ciberseguridad como XDR (Extended Detection & Response)
+                      y/o EDR (Endpoint Detection & Response) para detectar y
+                      responder proactivamente ante el malware a nivel de
+                      usuarios y activos de la organización.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap" id="cap_Vulnerabilidades">
+            <div class="container">
+              <div class="cabecera">
+                <div>02</div>
+                <h2>Vulnerabilidades</h2>
+              </div>
+              <div class="contenido">
+                <div class="fondoimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                    alt=""
+                  />
+                </div>
+                <div class="cabecera2">
+                  <div>
+                    <div class="prioridad">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="34"
+                        height="35"
+                        viewBox="0 0 34 35"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_88_6979)">
+                          <path
+                            d="M24.0675 14.8715C24.3178 15.6137 24.4558 16.4162 24.4558 17.2446C24.4558 21.3609 21.1162 24.7005 17 24.7005C12.8838 24.7005 9.54416 21.3609 9.54416 17.2446C9.54416 13.1284 12.8751 9.79742 16.9914 9.78879V0.244629C7.60254 0.244629 0 7.8558 0 17.2446C0 26.6335 7.61117 34.2446 17 34.2446C26.3888 34.2446 34 26.6335 34 17.2446C34 15.5619 33.7584 13.9396 33.301 12.4035L24.0761 14.8715H24.0675Z"
+                            fill="url(#paint0_linear_88_6979)"
+                          ></path>
+                        </g>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_88_6979"
+                            x1="1.82081"
+                            y1="38.8959"
+                            x2="26.6046"
+                            y2="3.54108"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#DA291C"></stop>
+                            <stop
+                              offset="1"
+                              stop-color="#DA291C"
+                              stop-opacity="0"
+                            ></stop>
+                          </linearGradient>
+                          <clipPath id="clip0_88_6979">
+                            <rect
+                              width="34"
+                              height="34"
+                              fill="white"
+                              transform="translate(0 0.244629)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <p>Critica</p>
+                    </div>
+                    <span>/</span>
+                    <p>Vulnerabilidades</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="bannerimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/banner3.png"
+                    alt=""
+                  />
+                </div>
+                <div class="contentText">
+                  <h3 class="rojo">
+                    2.1 HPE Aruba enfrenta vulnerabilidades que permiten control
+                    no autorizado en redes
+                  </h3>
+                  <div class="contentTextColumn">
+                    <p>
+                      Según el boletín de seguridad de HPE Aruba Networking, se
+                      han identificado múltiples vulnerabilidades en los
+                      productos ArubaOS que podrían permitir la ejecución remota
+                      de código. Las vulnerabilidades CVE-2025-23051 y
+                      CVE-2025-23052 afectan a las versiones AOS-8 y AOS-10 de
+                      los sistemas operativos, impactando específicamente a
+                      Mobility Conductors, Controllers y Gateways gestionados de
+                      WLAN y SD-WAN.
+                    </p>
+                    <p>
+                      La primera vulnerabilidad (CVE-2025-23051) permite a un
+                      atacante autenticado sobrescribir archivos del sistema a
+                      través de la interfaz web de gestión, comprometiendo
+                      potencialmente toda la infraestructura de red. La segunda
+                      vulnerabilidad (CVE-2025-23052) permite la inyección de
+                      comandos en la interfaz de línea de comandos (CLI),
+                      otorgando al atacante control no autorizado sobre
+                      funciones críticas del sistema.
+                    </p>
+                    <p><b>Productos afectados:</b></p>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th style="background-color: #000">PRODUCTO</th>
+                          <th style="background-color: #000">VERSIÓN(ES)</th>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            AOS-10.4.x.x
+                          </td>
+                          <td style="background-color: #c6c6c6">
+                            10.4.1.4 y anteriores
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            AOS-8.12.x.x
+                          </td>
+                          <td style="background-color: #c6c6c6">
+                            8.12.0.2 y anteriores
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            AOS-8.10.x.x
+                          </td>
+                          <td style="background-color: #c6c6c6">
+                            8.10.0.14 y anteriores
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="cabecera3">
+                <div class="title">
+                  <h4>Recomendaciones</h4>
+                  <button>
+                    <div class="mas">
+                      Ver más
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 7L1 7"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7 1V13"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="menos">
+                      Ver menos
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 1L1 0.999999"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="contentVermas">
+                  <ul>
+                    <li>
+                      Aplicar inmediatamente los parches de seguridad
+                      proporcionados por Hewlett Packard Enterprise Security
+                      Bulletin para las vulnerabilidades CVE-2025-23051 y
+                      CVE-2025-23052. Según la nota de referencia, ubicado en el
+                      Ítem 6.5 del boletín.
+                    </li>
+                    <li>
+                      Realizar auditorías de seguridad periódicas para
+                      identificar y remediar configuraciones inseguras o
+                      vulnerabilidades en su infraestructura de TI.
+                    </li>
+                    <li>
+                      Implementar o tercerizar un servicio de Vulnerability
+                      Management (Gestión de Vulnerabilidades) y/o Vulnerability
+                      Response (Detección y actualización automática de
+                      Vulnerabilidades) en los activos críticos de la
+                      organización.
+                    </li>
+                    <li>
+                      Revisar y reforzar las políticas de acceso para minimizar
+                      los riesgos asociados con ataques de ejecución remota de
+                      código e impedir intentos de pivoting en la red.
+                    </li>
+                    <li>
+                      Adoptar los enfoques de zero-trust y segmentación de red
+                      para limitar el alcance de un ataque en caso de que alguna
+                      vulnerabilidad sea explotada.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="banner2">
+              <a
+                href="https://www2.claro.com.pe/empresas/soluciones/ciberseguridad?utm_campaign=ao_contenidos&utm_source=medios_propios&utm_medium=hablando_claro&utm_content=post-banner_boletin_producto&utm_term=empresas-awareness&cu=cp1737473964"
+                target="_blank"
+              >
+                <div class="fondoimg">
+                  <picture>
+                    <source
+                      srcset="
+                        https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/banner4m.png
+                      "
+                      media="(max-width: 650px)"
+                    />
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/banner4.png"
+                      alt="Imagen predeterminada"
+                    />
+                  </picture>
+                </div>
+                <div class="contentTextBanner">
+                  <p>CONOCE DE CERCA LAS PREFERENCIAS DE TUS CLIENTES CON</p>
+                  <h3>Wi-Fi Gestionado</h3>
+                  <button>Conoce más</button>
+                  <span
+                    >Disponible para clientes RUC 20 y RUC 10 con negocio.
+                    Sujeto a evaluación crediticia, cobertura y facilidades
+                    técnicas. Cobertura, requerimientos técnicos y restricciones
+                    en: claro.pe/comunicacionesunificadas</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="cap" id="cap_Phishing">
+            <div class="container">
+              <div class="cabecera">
+                <div>03</div>
+                <h2>Phishing</h2>
+              </div>
+              <div class="contenido">
+                <div class="fondoimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                    alt=""
+                  />
+                </div>
+                <div class="cabecera2">
+                  <div>
+                    <div class="prioridad">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_88_2535)">
+                          <path
+                            d="M18.4046 11.1853C18.5959 11.7528 18.7015 12.3665 18.7015 13C18.7015 16.1477 16.1477 18.7015 13 18.7015C9.85228 18.7015 7.29848 16.1477 7.29848 13C7.29848 9.85228 9.84569 7.30508 12.9934 7.29848V0C5.81371 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26C20.1797 26 26 20.1797 26 13C26 11.7132 25.8152 10.4726 25.4655 9.29797L18.4112 11.1853H18.4046Z"
+                            fill="url(#paint0_linear_88_2535)"
+                          ></path>
+                        </g>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_88_2535"
+                            x1="1.39239"
+                            y1="29.5569"
+                            x2="20.3447"
+                            y2="2.52081"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#FA9801"></stop>
+                            <stop
+                              offset="1"
+                              stop-color="#FA9801"
+                              stop-opacity="0"
+                            ></stop>
+                          </linearGradient>
+                          <clipPath id="clip0_88_2535">
+                            <rect width="26" height="26" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <p>ALTA</p>
+                    </div>
+                    <span>/</span>
+                    <p>Phishing</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="bannerimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/banner5.png"
+                    alt=""
+                  />
+                </div>
+                <div class="contentText">
+                  <h3 class="rojo">
+                    3.1 Nuevo kit de phishing Sneaky 2FA amenaza cuentas de
+                    Microsoft 365
+                  </h3>
+                  <div class="contentText">
+                    <p>
+                      Según el informe de Sekoia.io, en diciembre de 2024 se
+                      identificó un nuevo kit de phishing del tipo
+                      Adversary-in-The-Middle (AiTM) denominado Sneaky 2FA,
+                      dirigido principalmente a cuentas de Microsoft 365. Este
+                      kit se distribuye bajo el modelo de Phishing-as-a-Service
+                      (PhaaS) a través del servicio "Sneaky Log" en Telegram,
+                      permitiendo a los ciberdelincuentes obtener cookies de
+                      sesión para eludir la autenticación multifactor (MFA) en
+                      futuras autenticaciones.
+                    </p>
+                    <div class="contentTextColumn vermas">
+                      <p>
+                        Los investigadores señalan que las víctimas de Sneaky
+                        2FA son usuarios de Microsoft 365, independientemente
+                        del sistema operativo que utilicen. El vector de ataque
+                        comúnmente empleado es el envío de correos electrónicos
+                        de phishing que contienen enlaces a páginas de
+                        autenticación falsas de Microsoft. El método de ataque
+                        implica la implementación de técnicas como "autograb",
+                        que prellena automáticamente el campo de correo
+                        electrónico en la página de phishing, y el uso de
+                        desafíos de Cloudflare Turnstile para distinguir entre
+                        humanos y bots.
+                      </p>
+                      <p>
+                        El actor de amenazas detrás de Sneaky 2FA opera a través
+                        del servicio "Sneaky Log" en Telegram, ofreciendo el kit
+                        de phishing como un servicio a otros ciberdelincuentes.
+                        Los clientes reciben una versión ofuscada del código
+                        fuente para desplegarla de manera independiente. Las
+                        páginas de phishing suelen alojarse en infraestructuras
+                        comprometidas, frecuentemente en sitios web de WordPress
+                        y otros dominios controlados por los atacantes.
+                      </p>
+                    </div>
+                    <button>
+                      <div class="mas">
+                        Ver más
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 7L1 7"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M7 1V13"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="menos">
+                        Ver menos
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="2"
+                          viewBox="0 0 14 2"
+                          fill="none"
+                        >
+                          <path
+                            d="M13 1L1 0.999999"
+                            stroke="#DA291C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="cabecera3">
+                <div class="title">
+                  <h4>Recomendaciones</h4>
+                  <button>
+                    <div class="mas">
+                      Ver más
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 7L1 7"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7 1V13"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="menos">
+                      Ver menos
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 1L1 0.999999"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="contentVermas">
+                  <ul>
+                    <li>
+                      Ejecutar el bloqueo de los Indicadores de Compromiso
+                      (IoCs) previamente identificados en el ítem 5.
+                    </li>
+                    <li>
+                      Implementar o tercerizar métodos de autenticación con un
+                      tiempo de vida útil máxima, resistentes al phishing en
+                      lugar de depender únicamente de códigos 2FA tradicionales.
+                    </li>
+                    <li>
+                      Desarrollar un programa de concienciación al personal
+                      sobre la importancia de verificarla autenticidad de los
+                      correos electrónicos, especialmente aquellos que solicitan
+                      acciones inmediatas o contienen enlaces y adjuntos.
+                    </li>
+                    <li>
+                      Adoptar soluciones de gestión de acceso privilegiado (PAM)
+                      para limitar el acceso a cuentas sensibles y contener
+                      posibles daños por credenciales comprometidas
+                    </li>
+                    <li>
+                      Establecer reglas o casos de usos en soluciones SIEM, tipo
+                      diccionarios en antispam para detectar patrones de
+                      amenazas, mejorando la protección de manera eficiente y
+                      precisa.
+                    </li>
+                    <li>
+                      Implementar o externalizar soluciones avanzadas de
+                      ciberseguridad como XDR (Extended Detection & Response)
+                      y/o EDR (Endpoint Detection & Response) para detectar y
+                      responder de manera proactiva ante campañas de phishing
+                      dirigidas a los usuarios de la organización.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap" id="cap_Adversarios">
+            <div class="container">
+              <div class="cabecera">
+                <div>04</div>
+                <h2>Adversarios</h2>
+              </div>
+              <div class="contenido">
+                <div class="fondoimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                    alt=""
+                  />
+                </div>
+                <div class="cabecera2">
+                  <div>
+                    <div class="prioridad">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="27"
+                        viewBox="0 0 26 27"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_88_7136)">
+                          <path
+                            d="M18.4046 11.9988C18.5959 12.5682 18.7015 13.1839 18.7015 13.8195C18.7015 16.9775 16.1477 19.5397 13 19.5397C9.85228 19.5397 7.29848 16.9775 7.29848 13.8195C7.29848 10.6614 9.84569 8.10588 12.9934 8.09926V0.776855C5.81371 0.776855 0 6.61624 0 13.8195C0 21.0227 5.8203 26.8621 13 26.8621C20.1797 26.8621 26 21.0227 26 13.8195C26 12.5285 25.8152 11.2838 25.4655 10.1053L18.4112 11.9988H18.4046Z"
+                            fill="url(#paint0_linear_88_7136)"
+                          ></path>
+                        </g>
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_88_7136"
+                            x1="1.39239"
+                            y1="30.4306"
+                            x2="20.428"
+                            y2="3.36451"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#FA9801"></stop>
+                            <stop
+                              offset="1"
+                              stop-color="#FA9801"
+                              stop-opacity="0"
+                            ></stop>
+                          </linearGradient>
+                          <clipPath id="clip0_88_7136">
+                            <rect
+                              width="26"
+                              height="26.0852"
+                              fill="white"
+                              transform="translate(0 0.776855)"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <p>ALTA</p>
+                    </div>
+                    <span>/</span>
+                    <p>Adversarios</p>
+                  </div>
+                  <div>
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="bannerimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/banner6.png"
+                    alt=""
+                  />
+                </div>
+                <div class="contentText">
+                  <h3 class="rojo">
+                    4.1 Grupo APT 'DONOT' despliega malware en Android
+                    disfrazado de aplicación de chat en campaña de
+                    ciberespionaje
+                  </h3>
+                  <div class="contentTextColumn">
+                    <p>
+                      Según el informe de CYFIRMA, el grupo APT indio conocido
+                      como 'DONOT' ha desarrollado una aplicación maliciosa para
+                      dispositivos Android denominada "Tanzeem". Esta aplicación
+                      está dirigida a organizaciones gubernamentales
+                      disfrazándose como una aplicación de chat legítima. Sin
+                      embargo, una vez instalada, solicita al usuario habilitar
+                      los servicios de accesibilidad, otorgando así permisos que
+                      permiten a los atacantes acceder a información sensible
+                      del dispositivo.
+                    </p>
+                    <p>
+                      Los investigadores señalan que la aplicación maliciosa
+                      emplea la biblioteca OneSignal, una plataforma legítima
+                      para enviar notificaciones push, que en este caso es
+                      utilizada con fines maliciosos. Tras la instalación, la
+                      aplicación solicita permisos peligrosos como leer
+                      registros de llamadas, contactos, almacenamiento externo,
+                      mensajes SMS, ubicación precisa y cuentas del dispositivo.
+                      Estos permisos permiten a los atacantes extraer datos
+                      confidenciales y monitorear en tiempo real la actividad
+                      del usuario.
+                    </p>
+                    <p>
+                      El método de ataque implica la distribución de la
+                      aplicación a través de enlaces de phishing enviados
+                      mediante notificaciones push, aprovechando la confianza
+                      del usuario en aplicaciones de mensajería. El actor de
+                      amenazas 'DONOT' ha sido previamente asociado con campañas
+                      de ciberespionaje en la región, y esta táctica refleja una
+                      evolución en sus métodos para asegurar la persistencia del
+                      malware en los dispositivos comprometidos.
+                    </p>
+                    <p><b>TTPs de MITRE ATT&CK</b></p>
+                    <p>
+                      Es una lista estructurada para describir y clasificar los
+                      comportamientos conocidos de los atacantes en base a
+                      observaciones reales, expresados en varias matrices.
+                    </p>
+                    <p>
+                      <b>• Táctica:</b> corresponden a qué intentan lograr los
+                      adversarios.
+                    </p>
+                    <p>
+                      <b>• Técnica:</b> describe el cómo de la actividad real
+                      realizada por el adversario.
+                    </p>
+                    <p style="text-align: start">
+                      <b>• Procedimiento:</b> es la implementación específica
+                      que utiliza el adversario para ejecutar las técnicas y/o
+                      sub-técnicas.
+                      <br />
+                    </p>
+                  </div>
+                  <p class="pie">
+                    A continuación, las TTPS empleadas por el grupo Ransomware
+                    FunkSec
+                  </p>
+                  <div class="contentTextColumn vermas contentTextColumnnone">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th style="background-color: #000">Táctica</th>
+                          <th style="background-color: #000">Técnica</th>
+                          <th style="background-color: #000">Descripción</th>
+                          <th style="background-color: #000">Mitigación</th>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            Evasión de Defensa
+                          </td>
+                          <td style="background-color: #c6c6c6">T1406</td>
+                          <td style="background-color: #c6c6c6">
+                            Archivos o Información Ofuscados
+                          </td>
+                          <td style="background-color: #c6c6c6">-</td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            Descubrimiento
+                          </td>
+                          <td style="background-color: #c6c6c6">T1420</td>
+                          <td style="background-color: #c6c6c6">
+                            Archivo y Directorio Discovery
+                          </td>
+                          <td style="background-color: #c6c6c6">M1006</td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            Acceso Credencial
+                          </td>
+                          <td style="background-color: #c6c6c6">T1417</td>
+                          <td style="background-color: #c6c6c6">
+                            Captura de entrada
+                          </td>
+                          <td style="background-color: #c6c6c6">
+                            M1012 <br />
+                            M1006 <br />
+                            M1011
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            Descubrimiento
+                          </td>
+                          <td style="background-color: #c6c6c6">T1426</td>
+                          <td style="background-color: #c6c6c6">
+                            Descubrimiento de Información del Sistema
+                          </td>
+                          <td style="background-color: #c6c6c6">-</td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6" rowspan="2">
+                            Colección
+                          </td>
+                          <td style="background-color: #c6c6c6">T1533</td>
+                          <td style="background-color: #c6c6c6">
+                            Datos del Sistema Local
+                          </td>
+                          <td style="background-color: #c6c6c6">-</td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">T1513</td>
+                          <td style="background-color: #c6c6c6">
+                            Captura de Pantalla
+                          </td>
+                          <td style="background-color: #c6c6c6">
+                            M1013 <br />
+                            M1012 <br />
+                            M1011
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="background-color: #c6c6c6">
+                            Exfiltración
+                          </td>
+                          <td style="background-color: #c6c6c6">T1646</td>
+                          <td style="background-color: #c6c6c6">
+                            Exfiltración Sobre Canal C2
+                          </td>
+                          <td style="background-color: #c6c6c6">-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <button>
+                    <div class="mas">
+                      Ver más
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 7L1 7"
+                          stroke="#DA291C"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7 1V13"
+                          stroke="#DA291C"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="menos">
+                      Ver menos
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 1L1 0.999999"
+                          stroke="#DA291C"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="cabecera3">
+                <div class="title">
+                  <h4>Recomendaciones</h4>
+                  <button>
+                    <div class="mas">
+                      Ver más
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 7L1 7"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M7 1V13"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="menos">
+                      Ver menos
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M13 1L1 0.999999"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="contentVermas">
+                  <ul>
+                    <li>
+                      Ejecutar el bloqueo de los Indicadores de Compromiso
+                      (IoCs) previamente identificados en el ítem 5.
+                    </li>
+                    <li>
+                      Implementar o tercerizar servicios avanzados en Threat
+                      Hunting para detectar y monitorear los grupos APT y sus
+                      nuevas técnicas que puedan comprometer a la organización.
+                    </li>
+                    <li>
+                      Implementar o tercerizar un servicio de Attack Surface
+                      Management para identificar, priorizar y mitigar
+                      vulnerabilidades. Optimizando la estrategia de defensa y
+                      prevenir ataques al entender y controlar la superficie de
+                      exposición de una organización.
+                    </li>
+                    <li>
+                      Desarrollar un plan de respuesta a incidentes específico
+                      para ataques de ransomware, incluyendo la comunicación
+                      interna y externa.
+                    </li>
+                    <li>
+                      Implementar o externalizar soluciones de monitoreo y
+                      detección de endpoints, como XDR (Extended Detection &
+                      Response) y/o EDR (Endpoint Detection & Response), para
+                      identificar actividades sospechosas como enumeración de
+                      archivos, inyección de código, movimiento lateral y
+                      exfiltración de datos.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap" id="cap_Indicadores">
+            <div class="container">
+              <div class="contenido2">
+                <div class="fondoimg">
+                  <img
+                    src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/fondoblancotextura.png"
+                    alt=""
+                  />
+                </div>
+                <div class="cabecera2 uno">
+                  <div>
+                    <img
+                      src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="lista2">
+                  <div class="item">
+                    <div class="cabecera">
+                      <div class="title">Indicadores de compromiso</div>
+                      <button>
+                        <div class="mas">
+                          Ver más
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="15"
+                            viewBox="0 0 14 15"
+                            fill="none"
+                          >
+                            <path
+                              d="M13 7.24463L1 7.24463"
+                              stroke="#DA291C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                            <path
+                              d="M7 1.24463V13.2446"
+                              stroke="#DA291C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="menos">
+                          Ver más
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="3"
+                            viewBox="0 0 14 3"
+                            fill="none"
+                          >
+                            <path
+                              d="M13 1.56348L1 1.56348"
+                              stroke="#DA291C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="cuerpo">
+                      <div class="contentTextColumn3">
+                        <h4>5.1 DIRECCIONES IP</h4>
+                        <p>
+                          <b>(Ítem Malware: 1.1) </b> <br />
+                          156[.]247[.]33[.]53 45[.]195[.]148[.]107
+                        </p>
+                        <p>
+                          <b>(Ítem Malware: 1.2)</b>
+                          92[.]249[.]48[.]205 156[.]253[.]250[.]201
+                          194[.]50[.]16[.]15
+                        </p>
+                        <p>
+                          <b>(Ítem Phishing: 3.1)</b>
+                          101[.]99[.]92[.]124 185[.]125[.]100[.]81
+                        </p>
+                        <br />
+                        <h4>5.2 DOMINIO</h4>
+                        <p>
+                          <b>(Ítem Phishing: 3.1) </b><br />allorganichome[.]com
+                          auxin[.]co[.]in aweitapp[.]com
+                          carpetcleaningmanitoba[.]ca cchosting[.]co[.]za
+                          cnphys[.]com coysem[.]com drgoelsdmd[.]com
+                          eto1908[.]org forcainvicta[.]com[.]br funnelflex[.]co
+                          globalservicesqtr[.]com iziloyer[.]com
+                          kagumigroup[.]id leanstartupatelier[.]co
+                          meliorahospital[.]com mscserv[.]com
+                          mysilverfox[.]com[.]my nashnights[.]com
+                          pipaltree[.]ngo powa[.]co[.]zw printserve[.]co[.]ke
+                          senangwasap[.]com snatched-beautybar[.]com
+                          sukrajclasses[.]com thewoodlandretreat[.]in
+                          unalkardesler[.]net vlsbali[.]com wordtex[.]com
+                          www[.]fabribat[.]com www[.]northernaid[.]org
+                          yaharaho[.]com yogatrapezepoint[.]com
+                          yugaljeeautomotive[.]com
+                        </p>
+                        <p>
+                          <b>(Ítem Malware: 4.1)</b><br />
+                          toolgpt[.]buzz Updash[.]info
+                          Solarradiationneutron[.]appspot[.]com
+                          saturn789454[.]appspot[.]com
+                        </p>
+                      </div>
+                      <h4>5.3 HASHES</h4>
+                      <p>
+                        <b>(Ítem Malware: 1.1)</b><br />
+                        <b>MD5: </b> d44ec71c940ec762494e73f919c38ccf <br />
+                        <b>SHA-256: </b>
+                        08dad42da5aba6ef48fca27c783f78f06ab9ea7a933420e4b6b21e12e550dd7d
+                      </p>
+                      <p>
+                        <b>MD5: </b> 9ac2c0aab59be47ced6cc8616280393f <br />
+                        <b>SHA-256: </b>
+                        33bc111238a0c6f10f6fe3288b5d4efe246c20efd8d85b4fe88f7d602d70738e
+                      </p>
+                      <p>
+                        <b>MD5: </b> be712a749947f0c11fabe0d701041231 <br />
+                        <b>SHA-256: </b>
+                        50a64e97c6a5417023f3561f33291b448ce830a4d99c40356af67301c8fa7523
+                      </p>
+                      <p>
+                        <b>MD5: </b> 62dc2f5f032a81f76fd676a8e4ffa514 <br />
+                        <b>SHA-256: </b>
+                        6d4dd4334791c91bb09e7a91dd5c450b2c6e3348a5586de011c54ce3f473f619
+                      </p>
+                      <p>
+                        <b>MD5: </b> ec947b19114e061d83ba11df66da6cb8 <br />
+                        <b>SHA-256: </b>
+                        76fc76dc651c3cc9d766a6ad8a90f605326463bc4cb2f8f053d44dfbc913beee
+                      </p>
+                      <p>
+                        <b>MD5: </b> ffeca40ce15d2b36d4b8943340fd32f9 <br />
+                        <b>SHA-256: </b>
+                        46af73560cafff5c8bbc16980d01641af0de3b689bc248dfb52afcf3a8a76a55
+                      </p>
+                      <p>
+                        <b>MD5: </b> 2b3adbdf56ca2ae3b087f42ff6119e52 <br />
+                        <b>SHA-256: </b>
+                        7bff2404c2816c4e1576d449820f01e3f46e7c972beb1843e3b8da2e065f8dc3
+                      </p>
+                      <p>
+                        <b>MD5: </b> 884df0442241c20ca539ebfd0151aeac <br />
+                        <b>SHA-256: </b>
+                        94ff4679dd5aec7874354c14132701ecdfbbb558c6011e4952d13bf843255529
+                      </p>
+                      <p>
+                        <b>MD5: </b> 8f6d9a96b70f059898daac49a39b7c52 <br />
+                        <b>SHA-256: </b>
+                        ae6d88ea99e530f778ee6088862b50dfb6e8bb45857211e9105428c57c2a7b4a
+                      </p>
+                      <p>
+                        <b>MD5: </b> 916aa96572279704b4d65b0920ec1dec <br />
+                        <b>SHA-256: </b>
+                        9aea0fdfead2e956bc0b4574c2b4cb2855dd9df6a5fd61d350f3285d249adfca
+                      </p>
+                      <p>
+                        <b>MD5: </b> 0368568fd12228f7fd8b8148fd5525f0 <br />
+                        <b>SHA-256: </b>
+                        c5d5054047a12efc68a67abd8f15069a853dd09800cd39d68df5a27702b45334
+                      </p>
+                      <p>
+                        <b>MD5: </b> e6894eb8f76033ce9e39599ebe9cd6dd <br />
+                        <b>SHA-256: </b>
+                        a97371df7d51fe0aee1d54b5b233a1713f69224802b1da35337a3041788990e6
+                      </p>
+                      <p>
+                        <b>MD5: </b> 04287f513e64b40c637b28ace61632f8 <br />
+                        <b>SHA-256: </b>
+                        4b6bf40dc331c89e416ef012a6dc4f55c83136197be7115246b42e4f7a828baa
+                      </p>
+                      <p>
+                        <b>MD5: </b> 735b298eeb229ba96f6cc735b7f0265e <br />
+                        <b>SHA-256: </b>
+                        30147b6691e5bc1a15c76cebf81b2de77d9099e8200b6ed9742c6e3b36505f34
+                      </p>
+                      <p>
+                        <b>MD5: </b> a570fca46794a04daa19d48b74a144e8 <br />
+                        <b>SHA-256: </b>
+                        9bd53057c8905d508374698e2595301f0be1529ec4ebfa71c09ad0c01a562982
+                      </p>
+                      <p>
+                        <b>MD5: </b> 21334280a74df5dcdb441a5eec005cd4 <br />
+                        <b>SHA-256: </b>
+                        4d64c2d1ae0de0f3066a6c020ab7aa5a9dd487c0cf1ff1ca2e93d98ff30e039f
+                      </p>
+                      <p>
+                        <b>MD5: </b> e710e6663ef02d519c390c3e43c86e77 <br />
+                        <b>SHA-256: </b>
+                        99fb7a40dbf6a042bcb77f67a5a76fe03ec3c6820ac5e15cb009795d545152ea
+                      </p>
+                      <p><b>(Ítem Malware: 1.2) </b></p>
+                      <p>
+                        <b>MD5: </b> c56081dc8a1fdd8144e463adc06ee761 <br />
+                        <b>SHA-256: </b>
+                        405491255ff73ddfb1dd2a1859347dd00a3ce05bc681693fc7cd95fc11717a5a
+                      </p>
+                      <p>
+                        <b>MD5: </b> 2670dbe69c733c0f9f73931ceea0cb8b <br />
+                        <b>SHA-256: </b>
+                        aebe831a4ab5dee97209ecc80a3a9728dae38dd8eb0cdc744bf26ff51baa6998
+                      </p>
+                      <p><b>(Ítem Adversarios: 4.1)</b></p>
+                      <p>
+                        <b>MD5: </b> 150bff0aaf52f2c30b7c1e9fd7b2a10a <br />
+                        <b>SHA-256: </b>
+                        8689d59aac223219e0fdb7886be289a9536817eb6711089b5dd099a1e580f8e4
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="cabecera">
+                      <div class="title">Fuentes</div>
+                      <button>
+                        <div class="mas">
+                          Ver más
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="15"
+                            viewBox="0 0 14 15"
+                            fill="none"
+                          >
+                            <path
+                              d="M13 7.24463L1 7.24463"
+                              stroke="#DA291C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                            <path
+                              d="M7 1.24463V13.2446"
+                              stroke="#DA291C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="menos">
+                          Ver más
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="3"
+                            viewBox="0 0 14 3"
+                            fill="none"
+                          >
+                            <path
+                              d="M13 1.56348L1 1.56348"
+                              stroke="#DA291C"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="cuerpo">
+                      <ul>
+                        <li>
+                          <div class="marker">6.1</div>
+                          <a
+                            href="https://gbhackers.com/hackers-weaponize-msi-packages-png-files-to-deliver-multi-stage-malware/"
+                            target="_blank"
+                          >
+                            https://gbhackers.com/hackers-weaponize-msi-packages-png-files-to-deliver-multi-stage-malware/
+                          </a>
+                        </li>
+                        <li>
+                          <div class="marker">6.2</div>
+                          <a
+                            href="https://intezer.com/blog/malware-analysis/weaponized-software-targets-chinese/"
+                            target="_blank"
+                          >
+                            https://intezer.com/blog/malware-analysis/weaponized-software-targets-chinese/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.3</div>
+                          <a
+                            href="https://www.trendmicro.com/en_us/research/25/a/iot-botnet-linked-to-ddos-attacks.html?&web_view=true"
+                            target="_blank"
+                          >
+                            https://www.trendmicro.com/en_us/research/25/a/iot-botnet-linked-to-ddos-attacks.html?&web_view=true</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.4</div>
+                          <a
+                            href="https://gbhackers.com/multiple-hpe-aruba-network-vulnerabilities"
+                            target="_blank"
+                          >
+                            https://gbhackers.com/multiple-hpe-aruba-network-vulnerabilities</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.5</div>
+                          <a
+                            href="https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw04723en_us&docLocale=en_US"
+                            target="_blank"
+                          >
+                            https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw04723en_us&docLocale=en_US</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.6</div>
+                          <a
+                            href="https://blog.sekoia.io/sneaky-2fa-exposing-a-new-aitm-phishing-as-a-service/"
+                            target="_blank"
+                          >
+                            https://blog.sekoia.io/sneaky-2fa-exposing-a-new-aitm-phishing-as-a-service/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.7</div>
+                          <a
+                            href="https://thehackernews.com/2025/01/donot-team-linked-to-new-tanzeem.html"
+                            target="_blank"
+                          >
+                            https://thehackernews.com/2025/01/donot-team-linked-to-new-tanzeem.html</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.8</div>
+                          <a
+                            href="https://www.cyfirma.com/research/android-malware-in-donot-apt-operations/"
+                            target="_blank"
+                          >
+                            https://www.cyfirma.com/research/android-malware-in-donot-apt-operations/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.9</div>
+                          <a
+                            href="https://attack.mitre.org/techniques/T1406/"
+                            target="_blank"
+                          >
+                            https://attack.mitre.org/techniques/T1406/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.10</div>
+                          <a
+                            href="https://attack.mitre.org/techniques/T1420/"
+                            target="_blank"
+                          >
+                            https://attack.mitre.org/techniques/T1420/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.11</div>
+                          <a
+                            href="https://attack.mitre.org/techniques/T1417/"
+                            target="_blank"
+                          >
+                            https://attack.mitre.org/techniques/T1417/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.12</div>
+                          <a
+                            href="https://attack.mitre.org/techniques/T1426/"
+                            target="_blank"
+                          >
+                            https://attack.mitre.org/techniques/T1426/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.13</div>
+                          <a
+                            href="https://attack.mitre.org/techniques/T1533/"
+                            target="_blank"
+                          >
+                            https://attack.mitre.org/techniques/T1533/</a
+                          >
+                        </li>
+                        <li>
+                          <div class="marker">6.14</div>
+                          <a
+                            href="https://attack.mitre.org/techniques/T1513/"
+                            target="_blank"
+                          >
+                            https://attack.mitre.org/techniques/T1513/</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="piepagina">
+            <div class="container">
+              <img
+                src="https://www.claro.com.pe/assets/havas/ciberseguridad/boletin_161/icon-claroempresas-blanco.png"
+                alt=""
+                class="logo"
+              />
+              <p class="bajada">
+                Tu aliado en
+                <strong
+                  >ciberseguridad <br />
+                  y transformación digital</strong
+                >
+              </p>
+              <p class="fuente2">
+                Conozca las opciones de seguridad que Claro Empresas tiene para
+                ofrecerle contactándose con su Consultor Corporativo o
+                escribiéndonos a claroempresas@claro.com.pe con el asunto
+                “Ciberseguridad”.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
