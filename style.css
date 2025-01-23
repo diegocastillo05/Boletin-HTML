@@ -259,6 +259,9 @@
   text-align: center;
   margin-top: 40px;
 }
+#boletinPlantilla .fuente a {
+  color: #fff;
+}
 #boletinPlantilla .fuente b {
   font-family: AMX;
   font-weight: 500;
